@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "eecs280/Pointers, Arrays, C-Strings.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "eecs280/Pointers, Arrays, C-Strings.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "eecs280/Pointers, Arrays, C-Strings.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "eecs280/Pointers, Arrays, C-Strings.md"
               }
             }
           }
@@ -148,15 +148,15 @@
   },
   "active": "69ce29fc41e30ec5",
   "lastOpenFiles": [
+    "eecs281/Lecture 7 - Containers.md",
+    "eecs281/Lecture 6, 7 - Recurrence Relations.md",
+    "eecs281/Lecture 4 - Complexity Analysis.md",
+    "eecs370/Lecture 3 - LC2K.md",
     "eecs370/Lecture 4 - ARM.md",
-    "engr100/Pasted image 20221007211100.png",
-    "Untitled.md",
-    "README.md",
-    "engr100/Pasted image 20221007213758.png",
-    "engr100/Pasted image 20221012183518.png",
-    "asianlan125/asianlan125.md",
-    "eecs280/Pointers, Arrays, C-Strings.md",
-    "eecs280/Variables, Functions, Abstraction.md",
-    "eecs280/Classes and Structs.md"
+    "eecs370/Lecture 5 - Memory Alignment.md",
+    "eecs370/Lecture 6 - Functions.md",
+    "eecs370/Lecture 7 - Linker and Floating Point Arithmetic.md",
+    "eecs370/Overall LC2K Table.md",
+    "eecs370/Overall LEGv8 Table.md"
   ]
 }

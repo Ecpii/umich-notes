@@ -9,6 +9,7 @@
 |Subtract and set flags|<nobr>`SUBS Xd, Xn, Xm`</nobr>|$X_d = X_n - X_m$|flags NZVC|
 |Subtract immediate|<nobr>`SUBI Xd, Xn, #uimm12`</nobr>|$X_d = X_n - 280$|12 bit unsigned, $[0, 4095]$|
 |Subtract immediate and set flags|<nobr>`SUBIS Xd, Xn, #uimm12`</nobr>|$X_d = X_n - 280$|flags NZVC|
+
 See [[Lecture 4 - ARM#Format]] for format.
 
 # Data Transfer
@@ -24,6 +25,7 @@ See [[Lecture 4 - ARM#Format]] for format.
 |store byte|<nobr>`STURB Xt, [Xn, #simm9]`</nobr>|$\text{mem}[X_n, 203] = X_t$|store lower 8b|
 |move wide with zero|<nobr>`MOVZ Xd, #uimm16, LSL N`</nobr>|$X_d = \text{0b}0\ldots0N0\ldots0$|zeros out Xd and place the unsigned integer in the first (N = 0), second (N = 16), third (N = 32), or fourth (N = 48) slot of Xd
 |move wide with keep|<nobr>`MOVK Xd, #uimm16, LSL N`</nobr>|$X_d = \text{0b}x\ldots xNx\ldots x$|same as above but keeps the original other bits|
+
 For more on loading/saving, see [[Lecture 4 - ARM#Memory Instructions]] and [[Lecture 5 - Memory Alignment]].
 
 # Logical Operations
@@ -46,13 +48,15 @@ For more on this, see [[Lecture 6 - Functions]]
 |branch|<nobr>`B #simm26`</nobr>|Branch to PC + the 26 bit signed number given * 4 (since byte addressable)|
 |branch to register|<nobr>`BR Xt`</nobr>|Branch to the address stored in Xt|
 |branch with link|<nobr>`BL #simm26`</nobr>|Branch as with `B`, but store the return address in X30|
+
 ## Conditional Branches
 |Description|Assembly|Extended Description|
 |---|---|---|
 |conditional branch = 0|<nobr>`CBZ Xt #simm26`</nobr>|Branch to PC + the 19 bit signed number given * 4 (since byte addressable) **if** register Xt == 0|
 |conditional branch != 0|<nobr>`CBNZ Xt #simm26`</nobr>|Branch to PC + the 19 bit signed number given * 4 (since byte addressable) **if** register Xt != 0|
 |conditional branch|<nobr>`B.cond #simm26`</nobr>|Branch to PC + the 19 bit signed number given * 4 (since byte addressable) **if** `cond` is true|
-### Conditional Cases (cond)
+
+### Conditional Cases (`cond`)
 |Condition|Code|Signed Number|Unsigned|Description|
 |---|---|---|---|---|
 |$=$|`EQ`|`Z == 1`|`Z == 1`|equal|
@@ -61,7 +65,8 @@ For more on this, see [[Lecture 6 - Functions]]
 |$\le$|`LE`/`LS`|`~(Z==0 & N==V)`|`~(Z==0 & N==V)`|less than or equal|
 |$>$|`GT`/`HI`|`(Z==0 & N==V)`|`(Z==0 & C==1)`|greater than|
 |$\le$|`GE`/`HS`|`N == V`|`C == 1`|greater than or equal|
+
 # Pseudoinstructions
-`MOV Xd, Xn` is the same as `ORR Xd, XZR, Xn` for copying registers
-`CMP Xn, Xm` is the same as `SUBS XZR, Xn, Xm` but without storing into register
-`CMPI` same as above but with immediate
+- `MOV Xd, Xn` is the same as `ORR Xd, XZR, Xn` for copying registers
+- `CMP Xn, Xm` is the same as `SUBS XZR, Xn, Xm` but without storing into register
+- `CMPI` same as above but with immediate
