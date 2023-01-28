@@ -11,28 +11,15 @@
             "id": "69ce29fc41e30ec5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "26abcb548935591d",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "2bc06fe070c6e5a8",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "README.md"
+              }
             }
           }
         ]
@@ -155,17 +146,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2bc06fe070c6e5a8",
+  "active": "69ce29fc41e30ec5",
   "lastOpenFiles": [
-    "eecs370/Lecture 6 - Functions.md",
-    "eecs281/Lecture 6, 7 - Recurrence Relations.md",
-    "eecs281/Lecture 7 - Containers.md",
     "eecs370/Lecture 4 - ARM.md",
-    "eecs370/LC2K Table.md",
-    "eecs370/Lecture 3 - LC2K.md",
-    "eecs370/Overall LEGv8 Table.md",
-    "eecs370/Lecture 5 - Memory Alignment.md",
-    "eecs281/Lecture 4 - Complexity Analysis.md",
-    "DisclosureStatement.pdf"
+    "engr100/Pasted image 20221007211100.png",
+    "Untitled.md",
+    "README.md",
+    "engr100/Pasted image 20221007213758.png",
+    "engr100/Pasted image 20221012183518.png",
+    "asianlan125/asianlan125.md",
+    "eecs280/Pointers, Arrays, C-Strings.md",
+    "eecs280/Variables, Functions, Abstraction.md",
+    "eecs280/Classes and Structs.md"
   ]
 }
