@@ -13,9 +13,35 @@ The object file includes the machine code that will go into the final executable
 |**Text**|(unfinished) machine code|
 |**Data**| initialized global and static locals (like `.fill`s)|
 |**Symbol table**|lists all the symbols that could possibly be used outside this file|
-|**Reloc table**|list of instructions and data words that must be updated if things are moved in memory|
+|**Relocation table**|list of instructions and data words that must be updated if things are moved in memory|
+
+### Symbol Table
+This keeps track of
+- global variables and exported functions
+- unresolved variables / functions
+- static variables (data)
+each entry contains:
+|Label|Type (Text/Data/Unknown)|Address (Section and Offset)|
+|---|---|---|
+
+### Relocation Table
+When linking files, sections in the code move around - the **relocation table**  tracks what instructions need to be update:
+- Calls to functions (**both** global and local)
+- References to anything in the Data section
+each entry contains:
+|Address of Instruction|Instruction/Directive Type|Referenced Symbol|
+|---|---|---|
+
 ## Linker Behavior
 A linker stiches object files into a single file.
 - first, take the text segment from each object and put them together
 - next, take the data segment from each object and put them together, put this at the end of the content
-- 
+
+
+# Memory Mapping
+There are four different spaces of memory in a computer program:
+- **Text** - direct instructions in the program (function calls, etc)
+- **Data** - static and global data/variables
+- **Heap** - dynamic memory
+- **Stack** - local variables for functions, includes parameters
+

@@ -39,3 +39,6 @@
 |Bits|31-25|24-22|21-0|
 |---|---|---|---|
 |Description|*unused*|**opcode**|*unused*|
+
+# Labels
+Labels that start with an uppercase letter are considered to be global
