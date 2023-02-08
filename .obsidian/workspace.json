@@ -8,43 +8,55 @@
         "type": "tabs",
         "children": [
           {
-            "id": "69ce29fc41e30ec5",
+            "id": "7075ce0a462b648f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "eecs281/Lecture 8 - Containers.md",
+                "file": "eecs370/Lecture 9 - Sequential Logic.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "328546738b92b7bd",
+            "id": "33dc28f7c64356f2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "eecs370/Overall LEGv8 Table.md",
+                "file": "Michigan Hackers/Interviewing/Behavioral.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "23c2d36b52a603f7",
+            "id": "9b7cb6a92f275a7a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "eecs370/Lecture 8 - Floating Point Representations, Combinational Logic.md",
+                "file": "Michigan Hackers/Interviewing/Linked Lists.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ad45f1695d9be9bf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "eecs370/Overall LC2K Table.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "eecs370/Lecture 8 - Floating Point Representations, Combinational Logic.md",
+                "file": "eecs370/Overall LC2K Table.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "eecs370/Lecture 8 - Floating Point Representations, Combinational Logic.md",
+                "file": "eecs370/Overall LC2K Table.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "eecs370/Lecture 8 - Floating Point Representations, Combinational Logic.md"
+                "file": "eecs370/Overall LC2K Table.md"
               }
             }
           }
@@ -171,17 +183,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "23c2d36b52a603f7",
+  "active": "ad45f1695d9be9bf",
   "lastOpenFiles": [
-    "eecs370/Lecture 7 - Linker.md",
+    "Michigan Hackers/Interviewing/Linked Lists.md",
+    "Michigan Hackers/Interviewing/Behavioral.md",
+    "eecs370/Lecture 9 - Sequential Logic.md",
     "eecs370/Lecture 8 - Floating Point Representations, Combinational Logic.md",
-    "eecs370/Overall LEGv8 Table.md",
-    "eecs281/Algorithms.md",
-    "eecs281/Lecture 8 - Containers.md",
-    "eecs281/Lecture 6, 7 - Recurrence Relations.md",
-    "eecs370/Lecture 4 - ARM.md",
+    "README.md",
     "eecs370/Overall LC2K Table.md",
     "eecs370/Lecture 3 - LC2K.md",
-    "eecs280/Pointers, Arrays, C-Strings.md"
+    "eecs280/Pointers, Arrays, C-Strings.md",
+    "eecs281/Lecture 7 - Containers.md",
+    "eecs281/Lecture 6, 7 - Recurrence Relations.md"
   ]
 }
