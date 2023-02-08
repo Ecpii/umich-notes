@@ -37,19 +37,55 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Michigan Hackers/Interviewing/Linked Lists.md",
+                "file": "eecs281/Lecture 8 - Containers.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "ad45f1695d9be9bf",
+            "id": "a49b1049389db11f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "eecs370/Overall LC2K Table.md",
+                "file": "eecs281/Lecture 9 - STL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "10d063ae5d5d0615",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "eecs281/Lecture 9 - STL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "753d51ad0f91d3d6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "eecs370/Lecture 8 - Floating Point Representations, Combinational Logic.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8dede1e69c12dcd7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "eecs370/Lecture 8 - Floating Point Representations, Combinational Logic.md",
                 "mode": "source",
                 "source": false
               }
@@ -183,17 +219,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ad45f1695d9be9bf",
+  "active": "8dede1e69c12dcd7",
   "lastOpenFiles": [
-    "Michigan Hackers/Interviewing/Linked Lists.md",
-    "Michigan Hackers/Interviewing/Behavioral.md",
-    "eecs370/Lecture 9 - Sequential Logic.md",
+    "eecs370/Lecture 9 - Combinational Logic.md",
     "eecs370/Lecture 8 - Floating Point Representations, Combinational Logic.md",
-    "README.md",
+    "eecs370/Lecture 10 - Single Cycle CPUs.md",
+    "eecs281/Lecture 9 - STL.md",
+    "eecs281/Lecture 10.md",
+    "eecs281/Lecture 8 - Containers.md",
+    "eecs280/Variables, Functions, Abstraction.md",
     "eecs370/Overall LC2K Table.md",
-    "eecs370/Lecture 3 - LC2K.md",
-    "eecs280/Pointers, Arrays, C-Strings.md",
-    "eecs281/Lecture 7 - Containers.md",
-    "eecs281/Lecture 6, 7 - Recurrence Relations.md"
+    "eecs370/Lecture 7 - Linker.md",
+    "eecs370/Overall LEGv8 Table.md"
   ]
 }

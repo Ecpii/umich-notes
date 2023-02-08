@@ -12,7 +12,9 @@ A single precision floating point number is represented as such:
 |---|---|---|---|
 |Description|0 = positive, 1 = negative|The power of 2 to multiply the mantissa by|The 23 most significant bits after the binary point|
 |Bits|31|30-23|22-0|
+
 The exponent uses **biased base 127 encoding**, which means that you subtract 127 from the value of the exponent. The range of values here is $[-126, 127]$
+
 ![[Pasted image 20230131191758.jpg]]
 ## Conversion
 When converting a decimal number to an IEEE 754 number, we take the most significant bit of the mantissa to be $2^{-1}$, the next most significant bit to be $2^{-2}$, etc. Thus, $10.625_{10} = 1010.101_{2}$.
@@ -23,10 +25,13 @@ $$
 $$
 ## Addition Notes
 You may lose precision when adding floats because they are normalized to the same base when you add two numbers together, and you may end up running out of bits to represent them. This is largely unavoidable. IEEE 754 also defines a double precision number (a `double`) which has 64 bits, using the same logic as the single precision number defined above. You get 53 bits of precision with a `double`, while the most accurate physical values known are at only 47 bits of precision.
+
 ![[Pasted image 20230131193343.png]]
+
 # Combinational Logic
 Everything in digital logic is a transistor, which is something that is either on or off. Really small, really fast.
 Symbol:
+
 ![[Pasted image 20230131221333.png]]
 
 A high voltage makes the transistor act as a wire, a low voltage makes it act like an open switch.
@@ -34,7 +39,9 @@ A bubble at the end of a logic gate means to invert the output.
 
 ## Multiplexor
 A **multiplexor** or mux is a circuit that can select between two inputs (like an if statement)
+
 ![[Pasted image 20230131221938.png]]
+
 You can technically make any circuit using muxes.
 ## Addition
 Doing addition on two bits has the following truth table:
@@ -44,7 +51,9 @@ Doing addition on two bits has the following truth table:
 |0|1|0|1|
 |1|0|0|1|
 |1|1|1|0|
+
 The logic gate for this is:
+
 ![[Pasted image 20230131222524.png]]
 This is called a half-adder, since it takes in two bits (doesn't account for the carry in bit).
 
@@ -60,6 +69,7 @@ This is called a half-adder, since it takes in two bits (doesn't account for the
 |1|1|1|1|1|
 
 ![[Pasted image 20230131222743.png]]
+
 To add a big number, you can chain these full adders together:
 
 ![[Pasted image 20230131223324.png]]
