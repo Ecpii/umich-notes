@@ -27,6 +27,7 @@ $$
 You may lose precision when adding floats because they are normalized to the same base when you add two numbers together, and you may end up running out of bits to represent them. This is largely unavoidable. IEEE 754 also defines a double precision number (a `double`) which has 64 bits, using the same logic as the single precision number defined above. You get 53 bits of precision with a `double`, while the most accurate physical values known are at only 47 bits of precision.
 
 ![[Pasted image 20230131193343.png]]
+
 # Combinational Logic
 Everything in digital logic is a transistor, which is something that is either on or off. Really small, really fast.
 Symbol:
