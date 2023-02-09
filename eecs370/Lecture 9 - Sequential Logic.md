@@ -72,4 +72,14 @@ The basic structure of an FSM is:
 ![[Pasted image 20230202161610.png]]
 
 # Read Only Memory
-You can implement combinational logic/truth tables by just storing the outputs in read only memory. Take you inputs, then index into that memory using the inputs as an "address".
+You can implement combinational logic/truth tables by just storing the outputs in read only memory. Take your inputs, then index into that memory using the inputs as an "address".
+
+## Variants
+- ROM is non-volatile (doesn't need power to save values).
+- Programmable Read Only Memory is ROM that can be written exactly once
+- Electronically Erasable PROM can resetted to write to it again.
+The size of a ROM is
+$$
+2^{n_{\text{input}}} * n_{\text{output}}
+$$
+where $n_{\text{input}}$ and $n_{\text{output}}$ are the number of input and output bits respectively.
