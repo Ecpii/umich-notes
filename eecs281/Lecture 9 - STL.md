@@ -19,7 +19,7 @@ discussed in Lecture 10
 A vector keeps track of 3 pointers regardless of content. For multi-dimensional vectors, this looks like this:
 $3 + 3a + 3ab$
 for a vector
-```
+```cpp
 vector<vector<vector<T>>> ar3d(a,b,c);
 ```
 We want to reorder dimensions to reduce overhead: $a<b<c$.

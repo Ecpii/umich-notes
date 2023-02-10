@@ -8,12 +8,12 @@ The following circuit takes advantage of how `0 nor x` is `not x`, and `1 nor x`
 
 ## Truth Table
 
-|S|R|Q|Q-|
-|---|---|---|---|
-|0|0|Q|Q|
-|0|1|0|1|
-|1|0|1|0|
-|1|1|0|0|
+| S   | R   | Q   | Q-  |
+| --- | --- | --- | --- |
+| 0   | 0   | Q   | Q   |
+| 0   | 1   | 0   | 1   |
+| 1   | 0   | 1   | 0   |
+| 1   | 1   | 0   | 0   |
 
 ## Modes
 - set (S=1, R=0), q is set to 1
@@ -29,12 +29,12 @@ To fix this, we configure `and` gates in front of the inputs such that `R` and `
 ![[Pasted image 20230202152526.png]]
 
 ## Truth Table
-|D|G|R|S|Q|Q-|
-|---|---|---|---|---|---|
-|0|0|0|0|Q|Q-|
-|1|0|0|0|Q|Q-|
-|0|1|1|0|0|1|
-|1|1|0|1|1|0|
+| D   | G   | R   | S   | Q   | Q-  |
+| --- | --- | --- | --- | --- | --- |
+| 0   | 0   | 0   | 0   | Q   | Q-  |
+| 1   | 0   | 0   | 0   | Q   | Q-  |
+| 0   | 1   | 1   | 0   | 0   | 1   |
+| 1   | 1   | 0   | 1   | 1   | 0   |
 
 D can be thought of as "data" or "delay"
 G is often called a "gate" because when it is 0 it gets latched

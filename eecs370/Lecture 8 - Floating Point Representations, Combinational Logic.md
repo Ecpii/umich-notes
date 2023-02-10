@@ -8,10 +8,10 @@ not always easy to pick the right units, different scaling factors would be used
 what is used is the IEEE standard.
 ## IEEE 754
 A single precision floating point number is represented as such:
-| |Sign Bit|Exponent|Mantissa/Significand|
-|---|---|---|---|
-|Description|0 = positive, 1 = negative|The power of 2 to multiply the mantissa by|The 23 most significant bits after the binary point|
-|Bits|31|30-23|22-0|
+|             | Sign Bit                   | Exponent                                   | Mantissa/Significand                                |
+| ----------- | -------------------------- | ------------------------------------------ | --------------------------------------------------- |
+| Description | 0 = positive, 1 = negative | The power of 2 to multiply the mantissa by | The 23 most significant bits after the binary point |
+| Bits        | 31                         | 30-23                                      | 22-0                                                |
 
 The exponent uses **biased base 127 encoding**, which means that you subtract 127 from the value of the exponent. The range of values here is $[-126, 127]$
 
@@ -45,28 +45,28 @@ A **multiplexor** or mux is a circuit that can select between two inputs (like a
 You can technically make any circuit using muxes.
 ## Addition
 Doing addition on two bits has the following truth table:
-|A|B|C|S|
-|---|---|---|---|
-|0|0|0|0|
-|0|1|0|1|
-|1|0|0|1|
-|1|1|1|0|
+| A   | B   | C   | S   |
+| --- | --- | --- | --- |
+| 0   | 0   | 0   | 0   |
+| 0   | 1   | 0   | 1   |
+| 1   | 0   | 0   | 1   |
+| 1   | 1   | 1   | 0   |
 
 The logic gate for this is:
 
 ![[Pasted image 20230131222524.png]]
 This is called a half-adder, since it takes in two bits (doesn't account for the carry in bit).
 
-|A|B|Cin|Cout|S|
-|---|---|---|---|---|
-|0|0|0|0|0|
-|0|0|1|0|1|
-|0|1|0|0|1|
-|0|1|1|1|0|
-|1|0|0|0|1|
-|1|0|1|1|0|
-|1|1|0|1|0|
-|1|1|1|1|1|
+| A   | B   | Cin | Cout | S   |
+| --- | --- | --- | ---- | --- |
+| 0   | 0   | 0   | 0    | 0   |
+| 0   | 0   | 1   | 0    | 1   |
+| 0   | 1   | 0   | 0    | 1   |
+| 0   | 1   | 1   | 1    | 0   |
+| 1   | 0   | 0   | 0    | 1   |
+| 1   | 0   | 1   | 1    | 0   |
+| 1   | 1   | 0   | 1    | 0   |
+| 1   | 1   | 1   | 1    | 1   |
 
 ![[Pasted image 20230131222743.png]]
 

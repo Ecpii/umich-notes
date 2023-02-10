@@ -7,13 +7,13 @@ In linking, we need to keep track of
 
 ## Object Files
 The object file includes the machine code that will go into the final executable, and other information that will help with linking. An object file has the following format:
-|Section|Description|
-|---|---|
-|**Header**|keeps track of size of each section|
-|**Text**|(unfinished) machine code|
-|**Data**| initialized global and static locals (like `.fill`s)|
-|**Symbol table**|lists all the symbols that could possibly be used outside this file|
-|**Relocation table**|list of instructions and data words that must be updated if things are moved in memory|
+| Section              | Description                                                                            |
+| -------------------- | -------------------------------------------------------------------------------------- |
+| **Header**           | keeps track of size of each section                                                    |
+| **Text**             | (unfinished) machine code                                                              |
+| **Data**             | initialized global and static locals (like `.fill`s)                                   |
+| **Symbol table**     | lists all the symbols that could possibly be used outside this file                    |
+| **Relocation table** | list of instructions and data words that must be updated if things are moved in memory |
 
 ### Symbol Table
 This keeps track of
@@ -21,16 +21,16 @@ This keeps track of
 - unresolved variables / functions
 - static variables (data)
 each entry contains:
-|Label|Type (Text/Data/Unknown)|Address (Section and Offset)|
-|---|---|---|
+| Label | Type (Text/Data/Unknown) | Address (Section and Offset) |
+| ----- | ------------------------ | ---------------------------- |
 
 ### Relocation Table
 When linking files, sections in the code move around - the **relocation table**  tracks what instructions need to be update:
 - Calls to functions (**both** global and local)
 - References to anything in the Data section
 each entry contains:
-|Address of Instruction|Instruction/Directive Type|Referenced Symbol|
-|---|---|---|
+| Address of Instruction | Instruction/Directive Type | Referenced Symbol |
+| ---------------------- | -------------------------- | ----------------- |
 
 ## Linker Behavior
 A linker stiches object files into a single file.

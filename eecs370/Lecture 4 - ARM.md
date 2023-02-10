@@ -14,10 +14,10 @@ SUB X7, X1, X2
 ```
 Instruction bitwise format:
 
-|opcode|Rm|shamt|Rn|Rd|
-|---|---|---|---|---|
-||second register operand|shift amount|first register operand|destination register|
-|11 bits|5 bits|6 bits|5 bits|5 bits|
+| opcode  | Rm                      | shamt        | Rn                     | Rd                   |
+| ------- | ----------------------- | ------------ | ---------------------- | -------------------- |
+|         | second register operand | shift amount | first register operand | destination register |
+| 11 bits | 5 bits                  | 6 bits       | 5 bits                 | 5 bits               |
 
 ## Immediate Instructions
 The second source can be a register or an **i**mmediate (a constant in the instruction).
@@ -25,10 +25,10 @@ The second source can be a register or an **i**mmediate (a constant in the instr
 ADD X3, X4, #10 // different from the previous ADD opcode, #10 is a constant 10
 ```
 
-|opcode|immediate|Rn|Rd|
-|---|---|---|---|
-||unsigned int|first register operand amount|destination register|
-|10 bits|12 bits|5 bits|5 bits|
+| opcode  | immediate    | Rn                            | Rd                   |
+| ------- | ------------ | ----------------------------- | -------------------- |
+|         | unsigned int | first register operand amount | destination register |
+| 10 bits | 12 bits      | 5 bits                        | 5 bits               |
 
 ## Logical Instructions
 `AND`, `OR`, `XOR`, `NOT` are logical instructions you can use in ARM.
@@ -52,9 +52,9 @@ In ARM/LEG, registers are 64 bits wide. When loading in data smaller than this, 
 - set to zero: may lose sign on signed numbers
 - sign extend: take most significant bit of previous number and just fill the space with it
 
-|Desired amount of data|Operation|Unused bits|
-|---|---|---|
-|64 bits|LDUR (load unscaled to register)|N/A|
-|16 bits|LDURH|set to zero|
-|8 bits|LDURB|set to zero|
-|32 bits|LDURSW (load signed word)|Sign extend|
+| Desired amount of data | Operation                        | Unused bits |
+| ---------------------- | -------------------------------- | ----------- |
+| 64 bits                | LDUR (load unscaled to register) | N/A         |
+| 16 bits                | LDURH                            | set to zero |
+| 8 bits                 | LDURB                            | set to zero |
+| 32 bits                | LDURSW (load signed word)        | Sign extend |

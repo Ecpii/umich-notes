@@ -1,9 +1,9 @@
 # Index Sorting
 When you have data you don't want to modify or copy, but you want sorted, you can make an array that stores the indices of the data, and sort that.
-| |0|1|2|3|
-|---|---|---|---|---|
-|original data|1.1|0.8|1.9|0.2|
-|index sort|3|1|0|2|
+|               | 0   | 1   | 2   | 3   |
+| ------------- | --- | --- | --- | --- |
+| original data | 1.1 | 0.8 | 1.9 | 0.2 |
+| index sort    | 3   | 1   | 0   | 2   |
 
 # Lambda
 Unnamed functions. Syntax:

@@ -25,21 +25,21 @@ CISC (Complex Instruction Set Computing)
 # LC2K
 ## Instruction Format
 **Register Instructions**:
-|31-25|24-22|21-19|18-16|15-3|2-0|
-|---|---|---|---|---|---|
-|*unused*|**opcode**|**regA**|**regB**|*unused*|**destR**|
+| 31-25    | 24-22      | 21-19    | 18-16    | 15-3     | 2-0       |
+| -------- | ---------- | -------- | -------- | -------- | --------- |
+| *unused* | **opcode** | **regA** | **regB** | *unused* | **destR** |
 
 **Immediate Instructions**
-|31-25|24-22|21-19|18-16|15-0|
-|---|---|---|---|---|
-|*unused*|**opcode**|**regA**|**regB**|**offset**|
+| 31-25    | 24-22      | 21-19    | 18-16    | 15-0       |
+| -------- | ---------- | -------- | -------- | ---------- |
+| *unused* | **opcode** | **regA** | **regB** | **offset** |
 
 **J-type instructions**
-|31-25|24-22|21-19|18-16|15-0|
-|---|---|---|---|---|
-|*unused*|**opcode**|**regA**|**regB**|*unused*|
+| 31-25    | 24-22      | 21-19    | 18-16    | 15-0     |
+| -------- | ---------- | -------- | -------- | -------- |
+| *unused* | **opcode** | **regA** | **regB** | *unused* |
 
 **O-type instructions**
-|31-25|24-22|21-0|
-|---|---|---|
-|*unused*|**opcode**|*unused*|
+| 31-25    | 24-22      | 21-0     |
+| -------- | ---------- | -------- |
+| *unused* | **opcode** | *unused* |

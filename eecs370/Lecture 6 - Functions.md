@@ -17,15 +17,15 @@ ARM has an extra **program status register** to check for various conditions. Th
 - **C**arry
 Any instruction in ARM that ends with `S` will set the flags based on the result. For example, if `ADDS` has a negative result, the `N` flag is set. Condition Codes:
 
-|Encoding|Name (alias)|Meaning (integer)|Flags|
-|---|---|---|---|
-|`0000`|`EQ`|Equal|`Z==1`|
-|`0001`|`NE`|Not equal|`Z==0`|
-|`1010`|`GE`|Signed greater than or equal|`N==V`|
-|`1011`|`LT`|Signed less than|`N!=V`|
-|`1100`|`GT`|Signed greater than|`Z==0 && N==V`|
-|`1101`|`LE`|Signed less than or equal|`~(Z==0 && N==V)`|
-|`1110`|`AL`|Always|Any|
+| Encoding | Name (alias) | Meaning (integer)            | Flags             |
+| -------- | ------------ | ---------------------------- | ----------------- |
+| `0000`   | `EQ`         | Equal                        | `Z==1`            |
+| `0001`   | `NE`         | Not equal                    | `Z==0`            |
+| `1010`   | `GE`         | Signed greater than or equal | `N==V`            |
+| `1011`   | `LT`         | Signed less than             | `N!=V`            |
+| `1100`   | `GT`         | Signed greater than          | `Z==0 && N==V`    |
+| `1101`   | `LE`         | Signed less than or equal    | `~(Z==0 && N==V)` |
+| `1110`   | `AL`         | Always                       | Any               |
 
 The `CMP` instruction is a shortcut for `SUBS`, it does a subtract instruction and only sets flags, does not set a result.
 ```armasm
@@ -46,11 +46,11 @@ The unconditional branch has a 26 bit offset.
 # Unconditional Branching
 There are three types of unconditional branches in LEGv8:
 
-|instruction|example|direct|description|
-|---|---|---|---|
-|branch|`B 2500`|`go to PC + 10000`|Branch to target address; PC-relative|
-|branch to register|`BR X30`|`go to X30`|For switch, procedure return|
-|branch with link|`BL 2500`|`X30 = PC + 4; go to PC + 10000`|For procedure call, PC-relative|
+| instruction        | example   | direct                           | description                           |
+| ------------------ | --------- | -------------------------------- | ------------------------------------- |
+| branch             | `B 2500`  | `go to PC + 10000`               | Branch to target address; PC-relative |
+| branch to register | `BR X30`  | `go to X30`                      | For switch, procedure return          |
+| branch with link   | `BL 2500` | `X30 = PC + 4; go to PC + 10000` | For procedure call, PC-relative       |
 
 # Functions
 ## Passing Parameters
