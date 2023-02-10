@@ -51,3 +51,25 @@ def misragGries(k: int, s: iter):
 					del res[k]
 	return res
 ```
+# Sorts
+## Heap Sort
+**Time**: $O(n\log n)$ (though it does have linear overhead if data is not pre heap-formatted)
+**Space**: $O(1)$
+Discussed in [[Lecture 11 - Trees, Heaps, Sorted Containers]] (2/9).
+
+### Description
+- Heap order the data (if not already)
+- Switch the maximum element with the end element, and mark off the end of the heap to not include the last element (which you just "popped" off the heap)
+- Fix the heap
+- Repeat until sorted
+## Example
+using 1-indexed heap
+```cpp
+void heapsort(Item heap[], int n) {
+	heapify(heap, n);
+	for (int i = n; i >= 2; i--) {
+		swap(heap[i], heap[1]);
+		fixDown(heap, i - 1, 1);
+	}
+}
+```
