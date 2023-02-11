@@ -52,6 +52,74 @@ def misragGries(k: int, s: iter):
 	return res
 ```
 # Sorts
+## Bubble Sort
+**Time**: Best case $O(n)$, average/worst case $O(n^2)$
+**Space**: $O(1)$
+### Description
+For every pair of elements, switch them so that they resemble the right sorting order. Elements will bubble up to the end. Don't use this.
+
+## Selection Sort
+**Time**: $O(n^2)$
+**Space**: $O(1)$
+## Description
+- split the list into a sorted and unsorted part
+- iterate through the unsorted part
+- take the minimum element
+- swap it with the first element in the sorted part
+- expand the sorted part
+- repeat until no more unsorted part
+## Example
+```cpp
+void selectionSort(int[] items, int size) {
+	int sortBoundary = size - 1;
+	while (true) {
+		int currentExtrema = -1;
+		for (int i = 0; i < sortBoundary; i++) {
+			if (items[i] < items[currentExtrema]) {
+				currentExtrema = i;
+			}
+		}
+		swap(items[currentExrema], items[sortBoundary--]);
+		if (!sortBoundary) {
+			return;
+		}
+	}
+}
+```
+## Insertion Sort
+**Time**: $O(n)$ best, $O(n^2)$ average
+**Space**: $O(1)$
+
+## Description
+traverse through the elements left -> right. for each element, shift it left until its in the right place.
+
+## Merge Sort
+**Time**: $O(n \log n)$
+**Space**: $O(n)$
+
+### Description
+- keep splitting the list into smaller lists
+- when you get to lists of size 1, switch the lists so that they are in the right order
+- for each sublist, you merge the lists back together by looking at the top of each sublist and placing the minimum first
+
+## Quicksort
+**Time**: $O(n \log n)$, worst case $O(n^2)$
+**Space**: $O(log n)$
+not stable
+
+## Description
+- select a pivot
+- put all elements greater than that pivot in one list, all elements smaller in another list
+	- internally this is
+	- swap the pivot with the 0 index element
+	- create a `L` pointer and an `R` pointer
+	- advance the `L` pointer from index 1 until it encounters something that shouldn't be in its partition
+	- decrement the `R` pointer from index n - 1 until it encounters something that shouldn't be in its partition
+	- swap the two elements once they have stopped
+	- repeat until `L` and `R` cross
+	- swap the pivot and the element pointed to by `R` (by now `R` points to an element lower than the pivot)
+- quicksort the sides of both lists
+
 ## Heap Sort
 **Time**: $O(n\log n)$ (though it does have linear overhead if data is not pre heap-formatted)
 **Space**: $O(1)$
