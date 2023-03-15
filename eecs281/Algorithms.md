@@ -52,13 +52,13 @@ def misragGries(k: int, s: iter):
 	return res
 ```
 # Sorts
-## Bubble Sort
+# Bubble Sort
 **Time**: Best case $O(n)$, average/worst case $O(n^2)$
 **Space**: $O(1)$
-### Description
+## Description
 For every pair of elements, switch them so that they resemble the right sorting order. Elements will bubble up to the end. Don't use this.
 
-## Selection Sort
+# Selection Sort
 **Time**: $O(n^2)$
 **Space**: $O(1)$
 ## Description
@@ -86,23 +86,23 @@ void selectionSort(int[] items, int size) {
 	}
 }
 ```
-## Insertion Sort
+# Insertion Sort
 **Time**: $O(n)$ best, $O(n^2)$ average
 **Space**: $O(1)$
 
 ## Description
 traverse through the elements left -> right. for each element, shift it left until its in the right place.
 
-## Merge Sort
+# Merge Sort
 **Time**: $O(n \log n)$
 **Space**: $O(n)$
 
-### Description
+## Description
 - keep splitting the list into smaller lists
 - when you get to lists of size 1, switch the lists so that they are in the right order
 - for each sublist, you merge the lists back together by looking at the top of each sublist and placing the minimum first
 
-## Quicksort
+# Quicksort
 **Time**: $O(n \log n)$, worst case $O(n^2)$
 **Space**: $O(log n)$
 not stable
@@ -120,12 +120,12 @@ not stable
 	- swap the pivot and the element pointed to by `R` (by now `R` points to an element lower than the pivot)
 - quicksort the sides of both lists
 
-## Heap Sort
+# Heap Sort
 **Time**: $O(n\log n)$ (though it does have linear overhead if data is not pre heap-formatted)
 **Space**: $O(1)$
-Discussed in [[Lecture 11 - Trees, Heaps, Sorted Containers]] (2/9).
+Discussed in [[Lecture 12 - Trees, Heaps, Sorted Containers]] (2/9).
 
-### Description
+## Description
 - Heap order the data (if not already)
 - Switch the maximum element with the end element, and mark off the end of the heap to not include the last element (which you just "popped" off the heap)
 - Fix the heap
