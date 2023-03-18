@@ -1,3 +1,4 @@
-" Have j and k navigate visual lines rather than logical ones
 nmap j gj
 nmap k gk
+nmap 0 g0
+nmap $ g$
