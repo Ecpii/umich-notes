@@ -35,3 +35,10 @@ The key of any node is
 - greater than the keys of all nodes in the left
 - lees than or equal to the keys of all nodes in the right
 An inorder traversal of a BST is traversing sorted data.
+## Worst Case Tree
+A worst case binary search tree is one with no forks in it. This can be achieved by having either the greatest remaining and lowest remaining element at each level going down. This means that for $n$ elements, there are $2^{n-1}$ orders where the tree is worst case.
+## Node Removal
+If a node has no children, just remove it naively. If it has one child, replace it with its child. If it has two children, take the smallest node of the right tree (called the inorder successor) and replace the deleted node with it. This works because the inorder successor
+- can't have two children
+- must exist since rhs isn't empty
+- is greater than everything on the lhs
