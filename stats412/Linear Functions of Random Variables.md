@@ -25,34 +25,3 @@ The variance of the sample mean is the variance of population as a whole divided
 $$
 \sigma_{\bar X}^2 = \dfrac{\sigma^2}{n}
 $$
-# Joint Distributions of Random Variables
-The joint distribution of two discrete random variables $X, Y$ is
-$$
-P((X, Y) \in B)
-$$
-where $B$ is a set of pairs of possible values for $X$ and $Y$. We can define a pmf of $X$ and $Y$ such that
-$$
-p_{X, Y}(x, y) = P(X = x \text{ and } Y=y)
-$$
-A joint pmf must satisfy
-- $p(x, y) \ge 0$
-- $\sum_x \sum_y p(x, y) = 1$
-A pmf can be conceptualized as a table:
-![[Pasted image 20240206104802.png]]
-We can use the row/column sums to generate pmfs for each of the individual variables $x$ and $y$. This is an application of the **Law of Total Probability**, which states that
-$$
-P(A) = \sum_i^n P(A \cap B_i)
-$$
-where the $B$ events do not overlap and partition the entire space.
-
-Since these pmfs appear in the margins of the table, we refer to them as marginal pmfs. In a formula: 
-$$
-p_Y(y) = \sum_x p_{X,Y}(x, y)
-$$
-The conditional pmf of $Y$ given $X = x$ is defined as
-$$
-p_{Y | X}(y|x) = \dfrac{p_{X,Y}(x, y)}{p_X(x)}
-$$
-This is a function of $Y$ on fixed $x$, and is a valid pmf; it satisfies:
-- $p_{Y|X}(y|x) \ge 0$ for all $y$
-- $\sum_y p_{Y|X}(y|x) = 1$
