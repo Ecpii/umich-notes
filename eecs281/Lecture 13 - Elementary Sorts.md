@@ -5,7 +5,7 @@
 
 Insertion sort tip: do one pass of bubble sort to get the most extreme value at the start, this way you never have to check bounds
 
-# Quanitifying Sortedness
+# Quantifying Sortedness
 An **inversion** is any pair of elements (not necessarily contiguous) that are out of order
 
 # Counting Sort
