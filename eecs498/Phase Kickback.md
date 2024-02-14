@@ -54,3 +54,4 @@ CU\ket{\lambda +} = \ket{\lambda} \otimes \left(\ket 0 + e^{i\theta} \ket 1\righ
 $$
 The idea behind this is that there is only added phase on the $\ket 1$ state because the gate only activates when the control qubit is a 1.
 Generally, in phase kickback, the target qubit stays the same, and the control qubit rotates $\theta$ radians around the z-axis.
+The control qubit has to be in a superposition.
