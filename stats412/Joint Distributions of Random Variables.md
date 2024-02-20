@@ -59,4 +59,7 @@ $$
 P(X_1 \in A_1 \cap X_2 \in A_2 \cap \cdots \cap X_n \in A_n)
 = P(X_1 \in A_1)P(X_2 \in A_2) \cdots P(X_n \in A_n)
 $$
-
+If $X_i$ are identical independently distributed variables with a common marginal pdf $f(x)$, then their joint pdf is
+$$
+f_{X_1,\ldots,X_n}(x_1,\ldots,x_n) = f(x_1)\cdots f(x_n)
+$$

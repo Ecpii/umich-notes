@@ -7,3 +7,11 @@ Because the target register gets loaded with $y \oplus f(x)$, we can actually fe
 
 If you set the target qubit to $\ket 0$, the data register is unmodified. This may flip the bit of the target register, so this is called a bit-flip oracle.
 If you set the target register to $\ket -$, the target register stays unmodified and it may flip the phase of the data register. This is called a phase flip oracle.
+
+# Distinguishing States
+For any two states to be distinguished in **one measurement**, they must be on opposite sides of the Bloch sphere. This implies that the states have an inner product of 0, and there is some rotation of the Bloch sphere that can move these states to the z-axis.
+
+Most quantum algorithms will try to **encode a global property of a function onto orthogonal states**.
+
+# Quantum Speedup
+There are $2^{2^n}$ $n$-bit functions, so a quantum algorithm that can decide some property of a function gives a $\log_2(2^{2^n}) = 2^n$ times speedup.
