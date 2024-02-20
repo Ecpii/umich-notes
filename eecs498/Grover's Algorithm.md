@@ -31,3 +31,29 @@ such that $\ket{s'} \cdot \ket \omega = 0$, which implies that these two basis s
 $$
 \ket s = \dfrac{\sqrt{N - 1}}{\sqrt N}\ket{s'} + \dfrac{1}{\sqrt N}\ket{\omega}
 $$
+![[Pasted image 20240219122647.png]]
+The angle $\theta$ is equal to $\sin^{-1}\left(\frac{1}{\sqrt{N}}\right)$, since the vector has magnitude 1.
+After we apply the phase flip oracle, we reflect across $\ket{s'}$:
+![[Pasted image 20240219122834.png]]
+Then, we use the diffuser to rotate across $\ket s$:
+![[Pasted image 20240219122902.png]]
+which gives us an angle of $2\theta + \theta$ away from $\ket{s'}$. Every iteration of these two operations together gives an increase in $2\theta$. Since we want to rotate $\frac{\pi}{2} - \theta$ radians from $\ket s$ to get to $\ket \omega$, the number of iterations we need to do $r$ is
+$$
+\begin{align*}
+2\theta r &= \frac{\pi}{2} - \theta \\
+&=\frac{\pi}{4\theta} -  1 \\
+&= \frac{\pi}{4\sin^{-1}\left(\frac{1}{\sqrt{N}}\right)} - 1 \\
+&=\frac{\pi\sqrt N}{4} - 1 \\
+&=\left\lceil\frac{\pi\sqrt N}{4}\right\rceil \\
+\end{align*}
+$$
+assuming $N$ is very large and ceiling the value because we can only do an integer amount of iterations.
+
+## Diffuser
+If a state $\ket v$ is orthogonal to $\ket u$, flipping across $\ket u$ means that $\ket v \to -\ket v$. We can apply this to composite states by just flipping the sign of the coefficient of that state $\ket v$.
+
+Rotating around an arbitrary state like $\ket s$ is difficult though since it would take a lot of work to find all the basis states orthogonal to $\ket s$. It is, however, easy to know all states orthogonal to $\ket {00\cdots0}$, as these are every possible measurement.
+We can then rotate around $\ket s$ by:
+- Rotating so that $\ket s$ is equal to $\ket 0$ (this is applying a lot of $H$ gates, since that is how we got to $\ket s$)
+- Reflecting over all states orthogonal to $\ket 0$
+- Rotating so that $\ket 0$ is equal to $\ket s$

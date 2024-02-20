@@ -29,7 +29,7 @@ This is a function of $Y$ on fixed $x$, and is a valid pmf; it satisfies:
 - $p_{Y|X}(y|x) \ge 0$ for all $y$
 - $\sum_y p_{Y|X}(y|x) = 1$
 # Continuous Random Variables
-A function of two variables $f(x,y)$ is the join pdf of $X$ and $Y$ if for every region $B \subset \mathbb{R}^2$,
+A function of two variables $f(x,y)$ is the joint pdf of $X$ and $Y$ if for every region $B \subset \mathbb{R}^2$,
 $$
 P((X, Y) \in B) = \int \int_{(x, y) \in B} f(x,y)dxdy
 $$
