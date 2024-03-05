@@ -64,3 +64,49 @@ $$
 \text{Var}(X) = \dfrac{r(1 - p)}{p^2}
 $$
 
+# Hypergeometric Distribution
+A box contains $N$ balls, of which $R$ are red. We sample $n$ balls without replacement and let $X$ be the number of red balls.
+$$
+P(X = x) = \begin{cases}
+\dfrac{\binom{R}{x}\binom{N-R}{n-x}}{\binom{N}{n}} & \text{max}(0, R+ n - N) \le x \le \text{min}(n, R) \\
+0 &\text{otherwise}
+\end{cases}
+$$
+If $X \sim H(N, R, n)$, then
+$$
+E(X) = n\dfrac{R}{N}
+$$
+$$
+\text{Var}(X) = n\dfrac{R}{N}\left(1 - \dfrac{R}{N}\right)\dfrac{N-n}{N-1}
+$$
+If we let $p = \dfrac{R}{N}$,
+$$
+E(X) = np
+$$
+$$
+\text{Var}(X) = np\left(1 - p\right)\dfrac{N-n}{N-1}
+$$
+# Poisson Distribution
+The Poisson distribution is discrete with the pmf
+$$
+p_X(x) = e^{-\lambda} \dfrac{\lambda^x}{x!}, x = 0, 1, 2, \cdots
+$$
+where $\lambda > 0$ is a parameter. The mean and variance of $X$ are both equal to $\lambda$. Usually, $\lambda$ is a rate.
+The binomial distribution can be well approximated by Poisson if you take $\lambda = np$. The approximation becomes exact as $n \to \infty$.
+
+If $X \sim \text{Bin}(n,p)$ and $Y \sim \text{Poisson}(\lambda = np)$, then
+$$
+|P(X = x) - P(Y = y)| \le p(1 - e^{-np})
+$$
+The sum of two Poisson distributions is also a Poisson distribution. If $X \sim \text{Poisson}(\lambda_1)$ and $Y \sim \text{Poisson}(\lambda_2)$ are independent, then
+$$
+X + Y \sim \text{Poisson}(\lambda_1 + \lambda_2)
+$$
+# Multinomial Distribution
+This distribution is similar to the binomial distribution, except now each of those $n$ trials can have $k$ outcomes. If $j = 1, \ldots, k$ and $X_j$ is the number of trials that result in outcome $j$, then the joint pmf of $X_1, \ldots, X_k$ is
+$$
+P(X_1 = x_1, \ldots X_k = x_k) = \begin{cases}
+\dfrac{n!}{x_1!x_2!\cdots x_k!} p_1^{x_1}p_2^{x_2}\cdots p_k^{x_k} & x_I \ge 0, \sum_j x_j = n \\
+0 & \text{otherwise}
+\end{cases}
+$$

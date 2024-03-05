@@ -1,0 +1,3 @@
+Formal statistical inference starts with an assumption about the population distribution - then an attempt to identify the parameters of assumed distribution.
+## Parametric Distributions
+A parametric distribution is a distribution whose form is completely determined by a parameter $\theta$. The set of all possible values of $\theta$ is called the parameter space and is often labeled as $\Theta$. Determining what $\theta$ is is referred to as **parametric inference.**
