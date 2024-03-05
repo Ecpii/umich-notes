@@ -101,4 +101,9 @@ $$
 \sigma_X^2 = E(X^2) - \mu_X^2 = \int_{-\infty}^\infty x^2 f_X(x)\ \text dx - \mu_X^2
 $$
 ## Properties of an Exponential Distribution
-The mean of an exponential distribution with parameter $\lambda$ is $\dfrac{1}{\lambda}$. The variance is $\dfrac{1}{\lambda^2}$.  Deriving these uses integration by parts.
+The mean of an exponential distribution with parameter $\lambda$ is $\dfrac{1}{\lambda}$. The variance is $\dfrac{1}{\lambda^2}$.  Deriving these uses integration by parts. An exponential distribution also has the "memoryless" property:
+For two numbers $t, s$
+$$
+P(X > t + s |X > s) = P(X > t)
+$$
+This is **only** true for the exponential distribution - it is a defining property.

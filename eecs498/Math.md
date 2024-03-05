@@ -2,3 +2,4 @@ The *inner product* of two complex vectors $a = [a_0\quad a_1]^T$  and $b = [b_0
 $$
 \braket{a|b} = \begin{bmatrix} a_0^* & a_1^* \end{bmatrix} \begin{bmatrix} b_0 \\ b_1\end{bmatrix} = a_0^* b_0 + a_1^* b_1
 $$
+The inner product of two states is preserved even after a unitary gate is applied.

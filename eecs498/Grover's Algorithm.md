@@ -57,3 +57,26 @@ We can then rotate around $\ket s$ by:
 - Rotating so that $\ket s$ is equal to $\ket 0$ (this is applying a lot of $H$ gates, since that is how we got to $\ket s$)
 - Reflecting over all states orthogonal to $\ket 0$
 - Rotating so that $\ket 0$ is equal to $\ket s$
+![[Pasted image 20240221121805.png]]
+Scaling this up to multiple qubits, we need to change our logic so that we are only adding phase to the $\ket {000\cdots0}$ since the pairwise CZ gates would get cumbersome:
+![[Pasted image 20240221122233.png]]
+
+# Multiple Solution Grover's Algorithm
+If there are $M$ solutions, then the angle that we rotate by is
+$$
+\theta = \sin^{-1}\left(\dfrac{2\sqrt{M(N - M)}}{N}\right)
+$$
+which means that we need
+$$
+r = \left \lfloor \frac{\pi}{4} \sqrt{\frac{N}{M}} \right \rfloor
+$$
+When we measure after doing rotations, we could get any one of the possible solutions with equal probability. This makes the algorithm not very useful for enumerating every solution.
+
+If $M > N/2$, then Grover's algorithm is not very useful as the approximation for $r$ breaks down. In these cases, it is faster and more reliable to use classical algorithms.
+
+Alternatively, we can add another input bit so that $N = 2N$ while $M = M$.
+
+## Counting Solutions
+One issue with this is that we need to know $M$ beforehand so we can determine how many iterations of Grover we should do. In both cases of Grover, doing too many iterations decreases the probability that we measure the correct answer later. In the intuition, this would look like over-rotating.
+
+One way of deriving $M$ is finding $\theta$.
