@@ -9,3 +9,7 @@ P(\theta) = \begin{bmatrix}
 0 & e^{i\theta}
 \end{bmatrix}
 $$
+# Quantum Phase Estimation
+We use the QFT to estimate how much phase a gate or operation $U$ kicks back. Say we have $n$ qubits to play with. Then, we apply a controlled $U$ on the eigenstate of $U$, with control bit 0. We then apply controlled $U$ twice on the next qubit, and repeat until desired precision ($n$ bits).
+We plug this back in to the QFT to get a number proportional to the state change. We divide this number by $2^n$ to get the actual phase.
+![[Pasted image 20240311121228.png]]

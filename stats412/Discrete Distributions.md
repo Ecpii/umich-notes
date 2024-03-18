@@ -48,7 +48,7 @@ p(x) \begin{cases}
 0 & \text{otherwise}
 \end{cases}
 $$
-This is denoted as $\text{NB}(r, p)$, and the case where $r = 1$ this is referred to as the geometric series.
+This is denoted as $\text{NB}(r, p)$, and the case where $r = 1$ this is referred to as the geometric distribution.
 ## Intuition
 The formula can be broken up into:
 - $p^r$ - probability of getting 1 $r$ times,
@@ -63,7 +63,6 @@ and the variance is
 $$
 \text{Var}(X) = \dfrac{r(1 - p)}{p^2}
 $$
-
 # Hypergeometric Distribution
 A box contains $N$ balls, of which $R$ are red. We sample $n$ balls without replacement and let $X$ be the number of red balls.
 $$
