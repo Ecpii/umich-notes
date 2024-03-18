@@ -27,11 +27,12 @@ Consider $\ket s$ to be the starting superposition of every input. Then, we can 
 $$
 \ket{s'} = \ket 0 + \ket 1 + \cdots + \ket{\omega - 1} + 0 + \ket{\omega + 1} + \cdots
 $$
-such that $\ket{s'} \cdot \ket \omega = 0$, which implies that these two basis states are orthogonal and can be used to define a linear system. This means that $\ket s$ can be expressed as a linear combination of the two:
+($\ket{s'}$ is the superposition of every state **except** $\ket \omega$). This makes it so that $\ket{s'} \cdot \ket \omega = 0$, which implies that these two basis states are orthogonal and can be used to define a linear system.
+![[Pasted image 20240219122647.png]]
+This means that $\ket s$ can be expressed as a linear combination of the two:
 $$
 \ket s = \dfrac{\sqrt{N - 1}}{\sqrt N}\ket{s'} + \dfrac{1}{\sqrt N}\ket{\omega}
 $$
-![[Pasted image 20240219122647.png]]
 The angle $\theta$ is equal to $\sin^{-1}\left(\frac{1}{\sqrt{N}}\right)$, since the vector has magnitude 1.
 After we apply the phase flip oracle, we reflect across $\ket{s'}$:
 ![[Pasted image 20240219122834.png]]
@@ -58,7 +59,11 @@ We can then rotate around $\ket s$ by:
 - Reflecting over all states orthogonal to $\ket 0$
 - Rotating so that $\ket 0$ is equal to $\ket s$
 ![[Pasted image 20240221121805.png]]
-Scaling this up to multiple qubits, we need to change our logic so that we are only adding phase to the $\ket {000\cdots0}$ since the pairwise CZ gates would get cumbersome:
+- The intuition behind this explicit **2-bit** diffuser is that the $\ket{01}$ and $\ket{10}$ states get handled by the two individual Z gates on each qubit. These states don't trigger the CZ gate because that requires both qubits to be 1.
+- When the $\ket{11}$ state passes through, it gets both bits flipped in phase, which is a global phase so we don't care (?), but then the CZ gate kicks in and adds a phase to just this state.
+Scaling this up to multiple qubits, we need to change our logic since otherwise we would have to make CZ gates on every pair of qubits to ensure we cover every combination of 1s.
+
+A clever way to invert the phase of every state that is not $\ket{00\cdots0}$ is to flip *just* the  $\ket{00\cdots0}$ state. We do this by inverting $\ket{00\cdots0}$ to $\ket{11\cdots1}$ and then applying MCZ:
 ![[Pasted image 20240221122233.png]]
 
 # Multiple Solution Grover's Algorithm
