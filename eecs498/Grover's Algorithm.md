@@ -42,7 +42,7 @@ which gives us an angle of $2\theta + \theta$ away from $\ket{s'}$. Every iterat
 $$
 \begin{align*}
 2\theta r &= \frac{\pi}{2} - \theta \\
-&=\frac{\pi}{4\theta} -  1 \\
+r &=\frac{\pi}{4\theta} -  1 \\
 &= \frac{\pi}{4\sin^{-1}\left(\frac{1}{\sqrt{N}}\right)} - 1 \\
 &=\frac{\pi\sqrt N}{4} - 1 \\
 &=\left\lceil\frac{\pi\sqrt N}{4}\right\rceil \\
