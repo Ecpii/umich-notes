@@ -71,7 +71,7 @@ To test variance with $\alpha$-level confidence, we have to calculate the sample
 $$
 s^2 = \frac{1}{n - 1} \sum_{i = 1}^n (X_I - \overline X)^2
 $$
-The test statistics we will use is
+The test statistics we will use are
 $$
 \chi^2 = \frac{(n - 1)s^2}{\sigma^2_0}
 $$
@@ -85,7 +85,7 @@ percentile of the $\chi^2$ distribution with $n - 1$ degrees of freedom. Our tes
 | $\sigma^2 \le \sigma_0^2$ | $\sigma^2 > \sigma_0^2$   | $\chi^2 > \chi^2_{n - 1, \alpha}$                                               |
 | $\sigma^2 \ge \sigma_0^2$ | $\sigma^2 < \sigma_0^2$   | $\chi^2 < \chi^2_{n - 1, 1 - \alpha}$                                           |
 | $\sigma^2 = \sigma_0^2$   | $\sigma^2 \ne \sigma_0^2$ | $\chi^2 > \chi^2_{n - 1, \alpha/2}$ or $\chi^2 < \chi^2_{n - 1,  1 - \alpha/2}$ |
-## Equality
+## Variance Equality
 Let
 $$
 \begin{gather*}

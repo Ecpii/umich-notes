@@ -122,3 +122,25 @@ $$
 T = \frac{\hat \beta_i - \beta_{i, 0}}{s_{\hat \beta_i}}
 $$
 under $t_{n - 2}$ where $\beta_{i, 0}$ represents the value of $\beta_i$ under $H_0$. When the error is not distributed as $N(0, \sigma^2)$ but $n$ is large, we can use $N(0, 1)$.
+# Inference on Mean Response
+$$
+\frac{\hat m(x) - m(x)}{s_{\hat m(x)}} \sim t_{n - 2}
+$$
+where
+$$
+s_{\hat m(x)} = s_\varepsilon \sqrt{\frac{1}{n} + \frac{(x - \overline x)^2}{\sum_{j = 1}^n (x_j - \overline x)^2}}
+$$
+where
+$$
+s_\varepsilon = \sqrt{\frac{(1 - r^2) \sum_{i = 1}^n (y_i - \overline y)^2}{n - 2}}
+$$
+## Confidence Intervals
+A $100(1 - \alpha)\%$ confidence interval for $m(x)$ is
+$$
+\hat m(x) \pm t_{n - 2, \alpha/2} s_{\hat m(x)}
+$$
+where $t_{n - 2}$ is the area under the $t$ distribution with $n - 2$ degrees of freedom up to the point of the test statistic
+$$
+T = \frac{\hat m(x) - m_0}{s_{\hat m(x)}}
+$$
+When the error distribution is not $N(0, \sigma^2)$ but $n$ is large, then we can assume $N(0, 1)$ instead of $t$.
